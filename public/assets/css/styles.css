@@ -74,13 +74,13 @@ section{
     background: url("img/tWbFZG.jpg") no-repeat center center/cover;
 }
 #experience{
-    background: url("img/restaurant.jpg") no-repeat center center/cover;
+    background: white;
 }
 #skills{
     background: url("img/Solar gradients 01.jpg") no-repeat center center/cover;
 }
 #contact{
-    background: url("img/bgDark.png") no-repeat center center/cover;
+    background: url("img/restaurant.jpg") no-repeat center center/cover;
 }
 .contact, .text{
     color: lightgrey;
