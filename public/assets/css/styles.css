@@ -92,8 +92,8 @@ section{
     background: darkgrey;
     width: 100%;
     overflow:auto;
-    height:124vh;
-    
+    height:122vh;
+    margin-bottom: 20px;
 }
 #skills{
     background: url("img/Solar gradients 01.jpg") no-repeat center center/cover;
@@ -103,7 +103,7 @@ section{
 #contact{
     background: url("img/restaurant.jpg") no-repeat center center/cover;
     width: 100%;
-    padding-top: 15px;
+    
 }
 .contact, .text{
     color: lightgrey;
@@ -112,14 +112,14 @@ section{
     font-size: 20px;
     box-sizing: border-box;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: minmax(100px, auto);
+    grid-template-rows: minmax(250px, auto);
     grid-column-gap: 25px;
-    grid-row-gap: 25px;
+    grid-row-gap: 40px;
     display: grid;
     position: relative;
     grid-auto-flow: dense;
     margin: 25px;
-    margin-top:-20px;
+    padding-bottom:30px;
     height: 45%;
     
 }
@@ -128,47 +128,59 @@ section{
     max-height:240px;
     overflow:auto;
     border-radius: 10px;
+    background:white;
 }
 
-.content img{
-    margin-top:-20px;
+
+.gridContainer .gridBox:nth-child(1){
+    min-width: 175px;
+    min-height: 260px;
 }
-.gridContainer .gridBox:nth-child(1) .contentBox{
-    min-width: 140px;
-}
-.gridContainer .gridBox:nth-child(2) .contentBox{
-    min-width: 140px;
+.gridContainer .gridBox:nth-child(2){
+    min-width: 175px;
+    min-height: 260px;
 }
 .gridContainer .gridBox:nth-child(3){
     grid-column: span 2;
     min-width: 300px;
-    min-height: 200px;
+    min-height: 260px;
 }
 .gridContainer .gridBox:nth-child(4){
     grid-column: span 2;
     min-width: 300px;
-    min-height: 150px;
+    min-height: 240px;
 }
 .gridContainer .gridBox:nth-child(5){
     grid-column: span 2;
     min-width: 300px;
-    min-height: 150px;
+    min-height: 240px;
 }
 
-
+.gridContainer .gridBox:nth-child(3) .contentBox img{
+    margin-bottom: -30px;
+}
+.gridContainer .gridBox:nth-child(4) .contentBox img{
+    margin-bottom: -40px;
+}
+.gridContainer .gridBox:nth-child(5) .contentBox img{
+    margin-bottom: -30px;
+}
 
 .contentBox{
     padding: 25px;
     background: white;
     padding-bottom: 10px;
-    
+    padding-top: 10px;
+    max-height: 200px;
 }
+
 .contentBox p{
     background: white;
 }
 .contentBox img{
     width: 100%;
     max-width: 200px;
+    margin-bottom: -10px;
 }
 
 .wrapper{
