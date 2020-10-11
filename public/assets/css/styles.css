@@ -75,7 +75,7 @@ section{
     width: 100%;
     height: 106vh;
     background: white;
-
+    overflow:auto;
 
 }
 
@@ -91,7 +91,7 @@ section{
 #experience{
     background: darkgrey;
     width: 100%;
-    overflow:auto;
+    
     height:122vh;
     margin-bottom: 20px;
 }
@@ -105,6 +105,13 @@ section{
     width: 100%;
     
 }
+
+div img{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
 .contact, .text{
     color: lightgrey;
 }
