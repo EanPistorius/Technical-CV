@@ -1,5 +1,5 @@
 body{
-	background: white;
+	background: darkgray;
 	font-family: Helvetica;
 	margin: 0;
     padding: 0;
@@ -91,7 +91,6 @@ section{
 #experience{
     background: darkgrey;
     width: 100%;
-    
     height:122vh;
     margin-bottom: 20px;
 }
@@ -101,24 +100,148 @@ section{
     height:124vh;
 }
 #contact{
-    background: url("img/restaurant.jpg") no-repeat center center/cover;
+    background: url("img/tWbFZG.jpg") no-repeat center center/cover;
     width: 100%;
     
 }
 
-div img{
+.portrait{
     border-radius: 50%;
     height: 150px;
     width: 150px;
 }
 
-.contact, .text{
-    color: lightgrey;
+
+
+.contact{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
+
+.contact h1{
+    width: 100%;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.contact .row{
+    position: relative;
+    width: 100%;
+    display: grid;
+    margin-left: 45%;
+
+}
+
+.contact .row .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.4s;
+}
+
+.contact .row .inputBox{
+    position: relative;
+    width: 45%;
+    height: 40px;
+    color: white;
+}
+
+.contact .row .inputBox input,
+.contact .row .inputBox textarea{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    z-index: 1;
+    font-size: 20px;
+    padding: 0px 10px;
+    color: brown;
+}
+
+.contact .row .inputBox .text{
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 40px;
+    font-size:18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.contact .row .inputBox input:focus + .text, .contact .row .inputBox input:valid + .text{
+    top: -35px;
+    right: -10px;
+}
+
+.contact .row .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: cream;
+    transition: 0.5s;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.contact .row .inputBox input:focus ~ .line,
+.contact .row .inputBox input:valid ~ .line{
+    height: 100%;
+}
+
+.contact .row .inputBox .textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.contact .row .inputBox textarea{
+    height: 100%;
+    resize: none;
+}
+
+.contact .row .inputBox textarea:focus + .text,
+.contact .row .inputBox textarea:valid + .text{
+    top: -35px;
+    right: -10px;
+}
+
+.contact .row .inputBox textarea:focus ~ .line,
+.contact .row .inputBox textarea:valid ~ .line{
+    height: 100%;
+}
+
+input[type="submit"]{
+    border: none;
+    padding: 8px 38px;
+    cursor: pointer;
+    outline: none;
+    background: lightcyan;
+    color: black;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
 .gridContainer{
+    position: absolute;
+    top: 0;
     font-size: 20px;
     box-sizing: border-box;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
     grid-template-rows: minmax(250px, auto);
     grid-column-gap: 25px;
     grid-row-gap: 40px;
@@ -141,36 +264,42 @@ div img{
 
 .gridContainer .gridBox:nth-child(1){
     min-width: 175px;
-    min-height: 260px;
+    min-height: 240px;
 }
 .gridContainer .gridBox:nth-child(2){
     min-width: 175px;
-    min-height: 260px;
+    min-height: 240px;
 }
 .gridContainer .gridBox:nth-child(3){
     grid-column: span 2;
     min-width: 300px;
-    min-height: 260px;
+    min-height: 240px;
 }
 .gridContainer .gridBox:nth-child(4){
-    grid-column: span 2;
+
     min-width: 300px;
     min-height: 240px;
 }
 .gridContainer .gridBox:nth-child(5){
-    grid-column: span 2;
+
     min-width: 300px;
     min-height: 240px;
 }
 
+.gridContainer .gridBox:nth-child(1) .contentBox img{
+    margin-bottom: -40px;
+}
+.gridContainer .gridBox:nth-child(2) .contentBox img{
+    margin-bottom: -40px;
+}
 .gridContainer .gridBox:nth-child(3) .contentBox img{
-    margin-bottom: -30px;
+    margin-bottom: -40px;
 }
 .gridContainer .gridBox:nth-child(4) .contentBox img{
     margin-bottom: -40px;
 }
 .gridContainer .gridBox:nth-child(5) .contentBox img{
-    margin-bottom: -30px;
+    margin-bottom: -40px;
 }
 
 .contentBox{
@@ -225,6 +354,7 @@ div img{
     margin: 0;
     padding: 0;
     overflow: none;
+    
 }
 
 .box li{

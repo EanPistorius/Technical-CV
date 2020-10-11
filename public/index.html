@@ -31,13 +31,14 @@
             <section id="about">
                 <div class="aboutGrid">
                 <h1>Something about me</h1>
-                <div><img src="assets/css/img/portrait.jpg"></div>
+                <div><img class="portrait" src="assets/css/img/portrait.jpg"></div>
                 <p>Determination is the key to success. Putting your mind to work is the only path to great success, this is what I am striving for.</p>
                 </div>
             </section>
             <section id="skills">
-                <h1 class="contact">What can I do?</h1>
-                <br>
+                <div class="aboutGrid">
+                    <h1>What can I do?</h1>
+                
                 <ul class="box">
                     <li><span class="line box1"></span><b>HTML &nbsp; (85%)</b></li>
                     <li><span class="line box2"></span><b>CSS &nbsp; (75%)</b></li>
@@ -48,10 +49,12 @@
                     <li><span class="line box7"></span><b>C++ &nbsp; (40%)</b></li>
                     <li><span class="line box8"></span><b>SiteCore &nbsp; (80%)</b></li>
                 </ul>
+                </div>
             </section>
             
             <section id="experience">
-                <h1>What have I been doing?</h1>
+                <div class="aboutGrid">
+                    <h1>What have I been doing?</h1>
                 <div class="gridContainer">
                     <div class="gridBox">
                         <div class="contentBox">
@@ -90,9 +93,11 @@
                             </div>
                         </div>
                 </div>
+                </div>
+                
             </section>
-            <section id="contact">
-                <h1 class="contact" >Contact me</h1>
+            <section class="contact" id="contact">
+                <h1>Contact me</h1>
                 <div class="row">
                     <div class="col">
                         <div class="inputBox">
@@ -152,6 +157,7 @@
         <script>
             var scroll = new SmoothScroll('a[href*="#"]');
         </script>
+
 </body>
 
 </html>
