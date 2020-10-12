@@ -25,13 +25,18 @@ h2{
 }
 h3{
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 600;
 }
 
 .aboutGrid p{
     background: whitesmoke;
     padding: 20px;
-    border-radius: 2px;
+    border-radius: 3px;
+}
+.gb {
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .container{
@@ -100,9 +105,10 @@ section{
 #api{
     background: #f1f1f1;
     width: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     
 }
 #contact{
@@ -133,9 +139,9 @@ section{
 
 
 .portrait{
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
+    border-radius: 40%;
+    height: 350px;
+    width: 400px;
 }
 
 
@@ -246,7 +252,7 @@ input[type="submit"]{
     padding: 8px 38px;
     cursor: pointer;
     outline: none;
-    background: #008080;
+    background: #f5deb3;
     color: black;
     font-size: 18px;
     border-radius: 5px;
@@ -534,7 +540,7 @@ input[type="submit"]{
 
 
 .apiAni{
-    width: 120%;
+    width: 100%;
     margin-left: -70%;
     
 }
@@ -586,11 +592,11 @@ input[type="submit"]{
 }
 
 .apiGrid{
+    display: none;
     position: absolute;
     right: 0;
     box-sizing: border-box;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    grid-template-rows: minmax(400px, auto);
     grid-column-gap: 25px;
     grid-row-gap: 40px;
     display: grid;
