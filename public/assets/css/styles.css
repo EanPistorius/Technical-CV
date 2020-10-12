@@ -1,5 +1,5 @@
 body{
-	background: darkgray;
+	background: f1f1f1;
 	font-family: Helvetica;
 	margin: 0;
     padding: 0;
@@ -11,10 +11,15 @@ body{
 h1{
     font-size: 60px;
     font-weight: 300;
-    color: black;
-    outline: black;
+    color: #000;
+    font-outline: white;
     outline-width: medium;
+    border: thick;
 }
+.skillsGrid h1{
+    color: #87ceeb;
+}
+
 h2{
     font-size: 50px;
     font-weight: 300;
@@ -24,10 +29,37 @@ h3{
     font-weight: 300;
 }
 
-p{
-    background: darkgrey;
+
+  
+  
+
+.aboutGrid p{
+    background: whitesmoke;
     padding: 20px;
-    width: content-fit;
+    border-radius: 2px;
+}
+.underlined {
+  color: black;
+  flex: 1;
+  font-size: 2em;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, black 0, black 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background .5s;
+}
+  .aboutGrid p a:hover {
+    background-size: 100% 100%;
+  }
+  
+h4 {
+  font-size: 100px;
+  margin: 2px;
+  writing-mode: vertical-lr;
+  text-align: center;
+  line-height: .9;
 }
 
 .container{
@@ -51,15 +83,11 @@ p{
 	margin-top: -2%;
 	display: inline-block;
 }
-
-
-
 nav li{
     
     display: inline;
     
 }
-
 .navbar ul li a:hover {
     color: white;
     transition: 0.8s;
@@ -88,22 +116,52 @@ section{
     width: 100%;
     grid-template-columns: repeat(3, minimax(250px, 1fr));
 }
-#experience{
-    background: darkgrey;
-    width: 100%;
-    height:122vh;
-    margin-bottom: 20px;
-}
 #skills{
     background: url("img/Solar gradients 01.jpg") no-repeat center center/cover;
     width: 100%;
     height:124vh;
 }
-#contact{
-    background: url("img/tWbFZG.jpg") no-repeat center center/cover;
+#experience{
+    background: #f1f1f1;
+}
+#api{
+    background: #f1f1f1;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
+#contact{
+    background: url("img/restaurant.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.aboutGrid{
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: minmax(250px, auto);
+    grid-column-gap: 25px;
+    grid-row-gap: 40px;
+    display: grid;
+    position: relative;
+    grid-auto-flow: dense;
+    margin: 25px;
+}
+
+.aboutGrid .aboutH1:nth-child(3){
+    grid-column: span 2;
+    min-width: 300px;
+    min-height: 240px;
+}
+.xpGrid{
+    
+}
+
 
 .portrait{
     border-radius: 50%;
@@ -121,10 +179,9 @@ section{
     flex-direction: column;
 
 }
-
 .contact h1{
     width: 100%;
-    color: white;
+    color: #800000;
     font-size: 36px;
     text-align: center;
     margin-bottom: 10px;
@@ -136,7 +193,6 @@ section{
     margin-left: 45%;
 
 }
-
 .contact .row .col{
     position: relative;
     width: 100%;
@@ -144,14 +200,12 @@ section{
     margin: 30px 0 10px;
     transition: 0.4s;
 }
-
 .contact .row .inputBox{
     position: relative;
     width: 45%;
     height: 40px;
-    color: white;
+    color: #008080;
 }
-
 .contact .row .inputBox input,
 .contact .row .inputBox textarea{
     position: relative;
@@ -164,9 +218,8 @@ section{
     z-index: 1;
     font-size: 20px;
     padding: 0px 10px;
-    color: brown;
+    color: #b8860b;
 }
-
 .contact .row .inputBox .text{
     position: absolute;
     top: 0;
@@ -178,12 +231,10 @@ section{
     transition: 0.5s;
     pointer-events: none;
 }
-
 .contact .row .inputBox input:focus + .text, .contact .row .inputBox input:valid + .text{
     top: -35px;
     right: -10px;
 }
-
 .contact .row .inputBox .line{
     position: absolute;
     bottom: 0;
@@ -191,17 +242,15 @@ section{
     display: block;
     width: 100%;
     height: 2px;
-    background: cream;
+    background: #008080;
     transition: 0.5s;
     border-radius: 4px;
     pointer-events: none;
 }
-
 .contact .row .inputBox input:focus ~ .line,
 .contact .row .inputBox input:valid ~ .line{
     height: 100%;
 }
-
 .contact .row .inputBox .textarea{
     position: relative;
     width: 100%;
@@ -212,13 +261,11 @@ section{
     height: 100%;
     resize: none;
 }
-
 .contact .row .inputBox textarea:focus + .text,
 .contact .row .inputBox textarea:valid + .text{
     top: -35px;
     right: -10px;
 }
-
 .contact .row .inputBox textarea:focus ~ .line,
 .contact .row .inputBox textarea:valid ~ .line{
     height: 100%;
@@ -229,11 +276,12 @@ input[type="submit"]{
     padding: 8px 38px;
     cursor: pointer;
     outline: none;
-    background: lightcyan;
+    background: #008080;
     color: black;
     font-size: 18px;
     border-radius: 5px;
     margin-top: 20px;
+    margin-left: -280px;
 }
 
 .gridContainer{
@@ -241,7 +289,7 @@ input[type="submit"]{
     top: 0;
     font-size: 20px;
     box-sizing: border-box;
-    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: minmax(250px, auto);
     grid-column-gap: 25px;
     grid-row-gap: 40px;
@@ -254,51 +302,23 @@ input[type="submit"]{
     
 }
 
-.gridBox{
+.gridContainer .gridBox{
+    min-width: 175px;
+    min-height: 240px;
     max-height:240px;
     overflow:auto;
     border-radius: 10px;
     background:white;
-}
-
-
-.gridContainer .gridBox:nth-child(1){
-    min-width: 175px;
-    min-height: 240px;
-}
-.gridContainer .gridBox:nth-child(2){
-    min-width: 175px;
-    min-height: 240px;
 }
 .gridContainer .gridBox:nth-child(3){
     grid-column: span 2;
     min-width: 300px;
     min-height: 240px;
 }
-.gridContainer .gridBox:nth-child(4){
-
-    min-width: 300px;
-    min-height: 240px;
+.gridContainer .gridBox:nth-child(5) .contentBox{
+    padding-top: 20px;
 }
-.gridContainer .gridBox:nth-child(5){
-
-    min-width: 300px;
-    min-height: 240px;
-}
-
-.gridContainer .gridBox:nth-child(1) .contentBox img{
-    margin-bottom: -40px;
-}
-.gridContainer .gridBox:nth-child(2) .contentBox img{
-    margin-bottom: -40px;
-}
-.gridContainer .gridBox:nth-child(3) .contentBox img{
-    margin-bottom: -40px;
-}
-.gridContainer .gridBox:nth-child(4) .contentBox img{
-    margin-bottom: -40px;
-}
-.gridContainer .gridBox:nth-child(5) .contentBox img{
+.gridContainer .gridBox .contentBox img{
     margin-bottom: -40px;
 }
 
@@ -309,7 +329,6 @@ input[type="submit"]{
     padding-top: 10px;
     max-height: 200px;
 }
-
 .contentBox p{
     background: white;
 }
@@ -541,4 +560,76 @@ input[type="submit"]{
     height: 100%;
     background: linear-gradient(to top, #008aff, #00ffe7);
     filter: blur(30px);
+}
+
+
+
+.perspective-text {
+  color: white;
+  font-family: Arial;
+  font-size: 58px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.perspective-line {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.perspective-text p {
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.5s ease-in-out;
+}
+.perspective-line:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(0.667);
+}
+.perspective-line:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.337);
+}
+.perspective-text:hover p {
+  transform: translate(0, -50px);
+}
+.perspective-line:nth-child(1) {
+  left: 29px;
+}
+.perspective-line:nth-child(2) {
+  left: 58px;
+  background: #800000;
+}
+.perspective-line:nth-child(3) {
+  left: 87px;
+  background: #808000;
+}
+.perspective-line:nth-child(4) {
+  left: 116px;
+  background: #191970;
+}
+.perspective-line:nth-child(5) {
+  left: 145px;
+  background: #d2b48c;
+}
+
+.apiGrid{
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-rows: minmax(400px, auto);
+    grid-column-gap: 25px;
+    grid-row-gap: 40px;
+    display: grid;
+    position: relative;
+    grid-auto-flow: dense;
+    margin: 25px;
+    padding-bottom:30px;
+    
+}
+
+.apiGrid .gridBox{
+    width: 100%;
 }
